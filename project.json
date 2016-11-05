@@ -1,9 +1,28 @@
 {
-  "TemplateName": "boilr-template",
-  "Authors": "Andrew Howden <hello[at]andrewhowden.com>",
-  "Year": "2016",
-  "GithubReference": "littlemanco/boilr-template",
-  "ProjectGoal": "",
-  "SimilarWork": "",
-  "Justification": ""
+  "Name": "secret-management",
+  "Application": "Vault",
+  "Role": "secret-management",
+  "Namespace": "www-example-com",
+  "Image": "vault",
+  "ImageVersion": "latest",
+  "Privileged": [
+    "true",
+    "false"
+  ],
+  "CpuLimit": "100m",
+  "MemoryLimit": "512Mi",
+  "CpuRequest": "100m",
+  "MemoryRequest": "512Mi",
+  "ApplicationPort": 80,
+  "ApplicationPortProtocol": [
+     "TCP",
+     "UDP"
+  ], 
+  "ApplicationPortName": "http",
+  "ProbeType": [
+    "tcp",
+    "http"
+  ],
+  "ApplicationBootTime": 5,
+  "ApplicationHealthCheckPeriod": 1
 }
